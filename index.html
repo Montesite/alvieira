@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alvieira Comércio de Alumínio</title>
+  <meta name="description" content="Grupo Alvieira: esquadrias de alumínio com a Boreal e móveis artesanais com a Qualitá. Qualidade, confiança e atendimento próximo em Rolândia/PR.">
+  <link rel="canonical" href="https://www.alvieira.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alvieira Comércio de Alumínio">
+  <meta property="og:description" content="Grupo Alvieira: esquadrias de alumínio com a Boreal e móveis artesanais com a Qualitá. Qualidade, confiança e atendimento próximo em Rolândia/PR.">
+  <meta property="og:image" content="https://www.alvieira.com.br/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://www.alvieira.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Alvieira Comércio de Alumínio",
+    "alternateName": ["Boreal Esquadrias de Alumínio", "Qualitá Móveis Artesanais"],
+    "url": "https://www.alvieira.com.br/",
+    "logo": "https://www.alvieira.com.br/assets/img/logo-alvieira.png",
+    "email": "mailto:alduansilveiras@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Itamarati, 2570 - Parque Industrial Cafezal",
+      "addressLocality": "Rolândia",
+      "addressRegion": "PR",
+      "postalCode": "86600-580",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/alvieiraaluminio",
+      "https://www.instagram.com/borealesquadrias",
+      "https://www.instagram.com/moveis.qualita"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #33363e;
+      --ink-soft: #454851;
+      --gray: #6b7280;
+      --gray-light: #9aa1ab;
+      --offwhite: #f6f6f7;
+      --white: #ffffff;
+      --amarelo: #f2c118;
+      --amarelo-dark: #d9a900;
+      --navy: #142544;
+      --navy-deep: #0b1730;
+      --navy-light: #2a4470;
+      --charcoal: #17140f;
+      --charcoal-soft: #241f17;
+      --dourado: #c9a227;
+      --dourado-light: #e0c368;
+      --header-h: 78px;
+      --container: 1180px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    :focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; border-radius: 4px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    section { position: relative; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 800; line-height: 1.2; }
+    h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--ink); }
+    h3 { font-size: 1.3rem; }
+    p { line-height: 1.7; color: var(--gray); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--amarelo-dark);
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: ''; width: 22px; height: 3px; background: var(--amarelo); border-radius: 2px;
+      transition: width .6s cubic-bezier(.16,1,.3,1) .15s;
+    }
+    .reveal:not(.in) .eyebrow::before { width: 0; }
+    .section-head { max-width: 720px; margin-bottom: 44px; }
+    .section-pad { padding: 96px 0; }
+    @media (max-width: 768px) { .section-pad { padding: 64px 0; } }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem;
+      padding: 15px 28px; border-radius: 10px; border: 2px solid transparent;
+      cursor: pointer; transition: all .25s ease; white-space: nowrap;
+      position: relative; overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,0.35), transparent);
+      transform: skewX(-20deg); transition: left .55s ease;
+    }
+    .btn:hover::before { left: 130%; }
+    .btn:active { transform: scale(0.97); }
+    .btn-amarelo { background: var(--amarelo); color: var(--ink); }
+    .btn-amarelo:hover { background: var(--amarelo-dark); color: var(--ink); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(242,193,24,0.35); }
+    .btn-outline-dark { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.55); }
+    .btn-outline-dark:hover { background: rgba(255,255,255,0.16); border-color: var(--white); color: var(--white); transform: translateY(-2px); }
+    .btn-outline-light { background: transparent; color: var(--ink); border-color: rgba(25,27,32,0.4); }
+    .btn-outline-light:hover { background: var(--ink); color: var(--white); border-color: var(--ink); transform: translateY(-2px); }
+    .btn-gold-outline { background: transparent; color: var(--dourado-light); border-color: rgba(224,195,104,0.55); }
+    .btn-gold-outline:hover { background: rgba(224,195,104,0.14); border-color: var(--dourado-light); color: var(--dourado-light); transform: translateY(-2px); }
+
+    /* Scroll progress bar */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--amarelo-dark), var(--amarelo));
+      z-index: 1100; transition: width .1s linear;
+    }
+
+    /* Header */
+    header#header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--header-h); background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid rgba(0,0,0,0.06); backdrop-filter: blur(6px);
+      transition: box-shadow .3s ease, background .3s ease;
+    }
+    header#header.scrolled { background: rgba(255,255,255,0.99); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+    .logo-link img { height: 30px; width: auto; transition: transform .25s ease; }
+    .logo-link:hover img { transform: scale(1.05); }
+    nav.main-nav { display: flex; align-items: center; gap: 34px; }
+    nav.main-nav a {
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.92rem;
+      color: var(--ink-soft); position: relative; padding: 6px 0;
+    }
+    nav.main-nav a::after {
+      content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px;
+      background: var(--amarelo); transition: width .2s ease;
+    }
+    nav.main-nav a:hover::after { width: 100%; }
+    .nav-cta { margin-left: 8px; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-toggle svg { width: 26px; height: 26px; color: var(--ink); }
+    body { padding-top: var(--header-h); }
+
+    @media (max-width: 900px) {
+      nav.main-nav {
+        position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+        height: calc(100vh - var(--header-h));
+        background: var(--white); flex-direction: column; align-items: flex-start;
+        padding: 30px 24px; gap: 22px; transform: translateX(100%);
+        transition: transform .3s ease; overflow-y: auto;
+      }
+      nav.main-nav.open { transform: translateX(0); }
+      nav.main-nav a { font-size: 1.1rem; }
+      .nav-toggle { display: block; }
+      .nav-cta { margin-left: 0; }
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(ellipse at top right, rgba(36,40,58,0.93) 0%, rgba(23,20,15,0.94) 55%, rgba(14,13,10,0.96) 100%),
+        url('assets/img/boreal-fachada-coluna.jpg') center 30%/cover no-repeat;
+      background-attachment: fixed, fixed;
+      color: var(--white); overflow: hidden; position: relative;
+      padding: 110px 0 100px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(115deg, rgba(242,193,24,0.05) 0px, rgba(242,193,24,0.05) 2px, transparent 2px, transparent 90px),
+        repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 46px);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 760px; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(242,193,24,0.12); border: 1px solid rgba(242,193,24,0.4);
+      color: var(--amarelo); font-family: 'Poppins', sans-serif; font-weight: 700;
+      font-size: 0.82rem; padding: 9px 18px; border-radius: 100px; margin-bottom: 26px;
+      animation: glowPulse 4s ease-in-out infinite;
+    }
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(242,193,24,0); }
+      50% { box-shadow: 0 0 18px rgba(242,193,24,0.25); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-tag { animation: none; } }
+    .hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.4rem); color: rgba(255,255,255,0.94); margin-bottom: 20px; }
+    .hero h2 {
+      font-family: 'Inter', sans-serif; font-weight: 400; font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+      color: rgba(255,255,255,0.82); max-width: 640px; margin-bottom: 40px; line-height: 1.6;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-brands { display: flex; gap: 28px; margin-top: 64px; flex-wrap: wrap; }
+    .hero-brand-chip { display: flex; align-items: center; gap: 12px; }
+    .hero-brand-chip img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+
+    /* SOBRE */
+    #sobre {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.97) 100%),
+        url('assets/img/qualita-showroom-lounge.jpg') center 20%/cover no-repeat;
+      background-attachment: fixed, fixed;
+    }
+    .sobre-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; }
+    .sobre-text p { margin-bottom: 18px; }
+    .sobre-text p:last-child { margin-bottom: 0; }
+    .mv-cards { display: flex; flex-direction: column; gap: 18px; }
+    .mv-card {
+      background: var(--ink); border-radius: 16px; padding: 30px 28px; color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .mv-card:hover {
+      transform: translateY(-6px); border-color: rgba(242,193,24,0.35);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.28);
+    }
+    .mv-card h3 { color: var(--amarelo); font-size: 1.05rem; margin-bottom: 10px; }
+    .mv-card p { color: rgba(255,255,255,0.72); font-size: 0.95rem; margin: 0; }
+    .valores-wrap { margin-top: 72px; }
+    .valores-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px;
+    }
+    .valor-card {
+      background: var(--offwhite); border-radius: 14px; padding: 24px;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+    }
+    .valor-card:hover {
+      transform: translateY(-5px); background: var(--white);
+      box-shadow: 0 16px 28px rgba(0,0,0,0.09);
+    }
+    .valor-card .valor-icon {
+      width: 40px; height: 40px; border-radius: 10px; background: rgba(242,193,24,0.16);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+      transition: transform .35s ease, background .35s ease;
+    }
+    .valor-card:hover .valor-icon { transform: rotate(-8deg) scale(1.08); background: rgba(242,193,24,0.28); }
+    .valor-card .valor-icon svg { width: 20px; height: 20px; color: var(--amarelo-dark); }
+    .valor-card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .valor-card p { font-size: 0.9rem; margin: 0; }
+    .valores-closing {
+      margin-top: 26px; font-family: 'Poppins', sans-serif; font-weight: 600;
+      font-style: italic; color: var(--ink-soft); font-size: 0.98rem;
+    }
+    @media (max-width: 900px) {
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .valores-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .valores-grid { grid-template-columns: 1fr; }
+    }
+
+    /* NEGOCIOS INTRO */
+    .negocios-intro {
+      background:
+        linear-gradient(180deg, rgba(246,246,247,0.94) 0%, rgba(246,246,247,0.95) 100%),
+        url('assets/img/boreal-fachada-vidro-01.jpg') center 25%/cover no-repeat;
+      background-attachment: fixed, fixed;
+      text-align: center;
+    }
+    .negocios-intro .section-head { margin: 0 auto 0; }
+    .negocios-intro p { max-width: 700px; margin: 0 auto; font-size: 1.05rem; }
+
+    /* BRAND BLOCKS shared */
+    .brand-block { padding: 100px 0; }
+    .brand-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: center; }
+    .brand-logo-wrap img { height: 64px; width: auto; margin-bottom: 26px; transition: transform .3s ease; }
+    .brand-logo-wrap:hover img { transform: scale(1.05); }
+    .brand-block h3 { font-size: clamp(1.5rem, 2.6vw, 1.9rem); margin-bottom: 16px; }
+    .brand-block .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
+    .chip {
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.82rem;
+      padding: 8px 16px; border-radius: 100px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .chip:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .gallery-grid a {
+      position: relative; display: block; overflow: hidden; border-radius: 12px; aspect-ratio: 4/5;
+      box-shadow: 0 0 0 rgba(0,0,0,0); transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .gallery-grid a:hover { transform: translateY(-4px); box-shadow: 0 20px 32px rgba(0,0,0,0.22); }
+    .gallery-grid img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s ease, filter .5s ease; filter: saturate(1) brightness(1);
+    }
+    .gallery-grid a:hover img { transform: scale(1.08); filter: saturate(1.15) brightness(1.04); }
+    .gallery-cap {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 12px 10px;
+      font-family: 'Poppins', sans-serif; font-size: 0.75rem; font-weight: 600; color: #fff;
+      background: linear-gradient(to top, rgba(0,0,0,0.72), transparent);
+      opacity: 0; transform: translateY(6px); transition: all .25s ease;
+    }
+    .gallery-grid a:hover .gallery-cap { opacity: 1; transform: translateY(0); }
+    .social-line { display: inline-flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.9rem; margin-top: 6px; transition: gap .25s ease; }
+    .social-line svg { width: 18px; height: 18px; transition: transform .25s ease; }
+    .social-line:hover svg { transform: scale(1.15) rotate(-6deg); }
+
+    /* BOREAL */
+    #boreal { background: var(--navy-deep); color: var(--white); }
+    #boreal p { color: rgba(255,255,255,0.72); }
+    #boreal .eyebrow { color: var(--amarelo); }
+    #boreal .chip { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.14); }
+    #boreal .social-line { color: var(--amarelo); }
+    #boreal .brand-logo-wrap img { filter: brightness(0) invert(1); }
+
+    /* QUALITA */
+    #qualita { background: linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-soft) 100%); color: var(--white); }
+    #qualita p { color: rgba(255,255,255,0.68); }
+    #qualita .eyebrow { color: var(--dourado-light); }
+    #qualita .eyebrow::before { background: var(--dourado); }
+    #qualita h3 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; color: var(--dourado-light); }
+    #qualita .chip { background: rgba(201,162,39,0.14); color: var(--dourado-light); border: 1px solid rgba(201,162,39,0.35); }
+    #qualita .social-line { color: var(--dourado-light); }
+    #qualita .brand-logo-wrap img { filter: brightness(0) invert(1); }
+
+    @media (max-width: 900px) {
+      .brand-grid { grid-template-columns: 1fr; gap: 34px; }
+      .gallery-grid { order: -1; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* DEPOIMENTOS */
+    #depoimentos {
+      background:
+        linear-gradient(180deg, rgba(246,246,247,0.92) 0%, rgba(246,246,247,0.95) 100%),
+        url('assets/img/qualita-varanda-conjunto.jpg') center 30%/cover no-repeat;
+      background-attachment: fixed, fixed;
+    }
+    .depo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .depo-card {
+      background: var(--offwhite); border-radius: 16px; padding: 32px 30px;
+      border: 1px solid rgba(0,0,0,0.05); position: relative;
+      transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+    }
+    .depo-card:hover {
+      transform: translateY(-6px); background: var(--white);
+      box-shadow: 0 20px 36px rgba(0,0,0,0.1);
+    }
+    .depo-card svg.quote { width: 30px; height: 30px; color: var(--amarelo); margin-bottom: 16px; transition: transform .35s ease; }
+    .depo-card:hover svg.quote { transform: scale(1.12) rotate(-4deg); }
+    .depo-card p.quote-text { color: var(--ink-soft); font-size: 1rem; margin-bottom: 18px; }
+    .depo-card .depo-role { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--ink); }
+    @media (max-width: 768px) { .depo-grid { grid-template-columns: 1fr; } }
+
+    /* CONTATO */
+    #contato {
+      background:
+        linear-gradient(160deg, rgba(25,27,32,0.92) 0%, rgba(25,27,32,0.95) 100%),
+        url('assets/img/boreal-esquadria-persiana.jpg') center 30%/cover no-repeat;
+      background-attachment: fixed, fixed;
+      color: var(--white);
+    }
+    #contato .eyebrow { color: var(--amarelo); }
+    #contato h2 { color: rgba(255,255,255,0.94); }
+    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    .contato-list { display: flex; flex-direction: column; gap: 22px; }
+    .contato-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contato-item .icon-box {
+      width: 44px; height: 44px; border-radius: 10px; background: rgba(242,193,24,0.14);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contato-item .icon-box svg { width: 20px; height: 20px; color: var(--amarelo); }
+    .contato-item strong { display: block; font-family: 'Poppins', sans-serif; font-size: 0.95rem; margin-bottom: 4px; }
+    .contato-item span, .contato-item a { color: rgba(255,255,255,0.7); font-size: 0.94rem; }
+    .contato-item a:hover { color: var(--amarelo); }
+    .contato-socials { display: flex; gap: 14px; margin-top: 8px; }
+    .contato-socials a {
+      display: flex; align-items: center; justify-content: center; width: 46px; height: 46px;
+      border-radius: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
+      transition: all .2s ease;
+    }
+    .contato-socials a:hover { background: var(--amarelo); border-color: var(--amarelo); transform: translateY(-4px) rotate(-6deg); }
+    .contato-socials a:hover svg { color: var(--ink); }
+    .contato-socials a svg { transition: color .2s ease; }
+    .contato-socials svg { width: 20px; height: 20px; color: var(--white); }
+    .contato-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px; padding: 36px;
+    }
+    .contato-card h3 { color: rgba(255,255,255,0.94); margin-bottom: 10px; }
+    .contato-card p { margin-bottom: 24px; }
+    @media (max-width: 900px) { .contato-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    /* FOOTER */
+    footer {
+      background:
+        linear-gradient(180deg, rgba(11,23,48,0.94) 0%, rgba(11,23,48,0.97) 100%),
+        url('assets/img/qualita-chaise-decks.jpg') center 15%/cover no-repeat;
+      background-attachment: fixed, fixed;
+      color: rgba(255,255,255,0.65); padding: 46px 0 20px;
+    }
+    .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 22px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-top img { height: 26px; filter: brightness(0) invert(1); }
+    .footer-nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-nav a { font-size: 0.9rem; }
+    .footer-nav a:hover { color: var(--amarelo); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      padding-top: 20px; font-size: 0.82rem;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* STAGGERED ENTRANCE for grids */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .valor-card, .gallery-grid a { opacity: 0; }
+    .gallery-grid.reveal { opacity: 1; transform: none; transition: none; }
+    .valores-wrap.in .valor-card,
+    .gallery-grid.in a,
+    .depo-card.in {
+      animation: fadeUp .6s cubic-bezier(.16,1,.3,1) both;
+    }
+    .valores-wrap.in .valor-card:nth-child(1) { animation-delay: .02s; }
+    .valores-wrap.in .valor-card:nth-child(2) { animation-delay: .09s; }
+    .valores-wrap.in .valor-card:nth-child(3) { animation-delay: .16s; }
+    .valores-wrap.in .valor-card:nth-child(4) { animation-delay: .23s; }
+    .valores-wrap.in .valor-card:nth-child(5) { animation-delay: .30s; }
+    .valores-wrap.in .valor-card:nth-child(6) { animation-delay: .37s; }
+    .gallery-grid.in a:nth-child(1) { animation-delay: .02s; }
+    .gallery-grid.in a:nth-child(2) { animation-delay: .09s; }
+    .gallery-grid.in a:nth-child(3) { animation-delay: .16s; }
+    .gallery-grid.in a:nth-child(4) { animation-delay: .23s; }
+    .gallery-grid.in a:nth-child(5) { animation-delay: .30s; }
+    .gallery-grid.in a:nth-child(6) { animation-delay: .37s; }
+    .depo-grid .depo-card:nth-child(2) { animation-delay: .1s; }
+    .depo-grid .depo-card:nth-child(3) { animation-delay: .18s; }
+    .depo-grid .depo-card:nth-child(4) { animation-delay: .26s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .valor-card, .gallery-grid a, .depo-card { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+    }
+
+    /* BACK TO TOP */
+    #back-top {
+      position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px;
+      border-radius: 50%; background: var(--ink); border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      opacity: 0; visibility: hidden; transition: all .25s ease; z-index: 900;
+    }
+    #back-top.show { opacity: 1; visibility: visible; }
+    #back-top:hover { background: var(--amarelo); border-color: var(--amarelo); transform: translateY(-3px); }
+    #back-top:hover svg { color: var(--ink); transform: translateY(-2px); }
+    #back-top svg { transition: transform .25s ease, color .25s ease; }
+    #back-top svg { width: 20px; height: 20px; color: var(--amarelo); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 80px 0 70px; }
+      .brand-grid, .sobre-grid { gap: 30px; }
+      .brand-block { padding: 64px 0; }
+      .valores-wrap { margin-top: 48px; }
+      .hero-brands { margin-top: 44px; }
+    }
+
+    /* Fixed (parallax) backgrounds are unsupported on iOS and can jank on
+       Android; fall back to normal scroll on touch-sized screens. */
+    @media (max-width: 768px) {
+      .hero, #sobre, .negocios-intro, #depoimentos, #contato, footer {
+        background-attachment: scroll, scroll;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .section-pad { padding: 48px 0; }
+      .brand-block { padding: 48px 0; }
+      .hero { padding: 64px 0 56px; }
+      .mv-card { padding: 24px 20px; }
+      .valor-card { padding: 20px; }
+      .depo-card { padding: 26px 22px; }
+      .contato-card { padding: 26px 22px; }
+      .hero-ctas { gap: 12px; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-ctas .btn { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo-link" aria-label="Alvieira — Início">
+        <img src="assets/img/logo-alvieira.png" alt="Alvieira Comércio de Alumínio — logo" fetchpriority="high">
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#sobre">Sobre</a>
+        <a href="#boreal">Boreal</a>
+        <a href="#qualita">Qualitá</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato" class="btn btn-amarelo nav-cta">Contato</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg id="iconMenu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="iconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <span class="hero-tag">Diferentes negócios. Um só propósito.</span>
+      <h1>Alvieira Comércio de Alumínio</h1>
+      <h2>Um grupo que reúne esquadrias de alumínio e móveis artesanais para dar forma a obras, ambientes e lares com qualidade, confiança e atendimento próximo.</h2>
+      <div class="hero-ctas">
+        <a href="#boreal" class="btn btn-amarelo">Conheça a Boreal</a>
+        <a href="#qualita" class="btn btn-outline-dark">Conheça a Qualitá</a>
+      </div>
+      <div class="hero-brands">
+        <div class="hero-brand-chip">
+          <img src="assets/img/logo-boreal.png" alt="Boreal Esquadrias de Alumínio">
+        </div>
+        <div class="hero-brand-chip">
+          <img src="assets/img/logo-qualita.png" alt="Qualitá Móveis Artesanais">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section-pad" id="sobre">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Sobre a Alvieira</span>
+        <h2>Um grupo, diferentes negócios, o mesmo propósito</h2>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-text reveal">
+          <p>A Alvieira nasceu da união de empresas que compartilham o mesmo propósito: oferecer qualidade, confiança e soluções que fazem parte de grandes projetos e também do dia a dia das pessoas.</p>
+          <p>Fazem parte desse grupo a <strong>Boreal</strong>, especializada em esquadrias para obras horizontais, e a <strong>Qualitá</strong>, que atua com móveis artesanais, levando design, conforto e acabamento para diferentes ambientes.</p>
+          <p>Com atuação em diferentes mercados e localizados em Cambé, no Paraná, e em Santa Catarina, o grupo vem construindo sua trajetória com base em relacionamentos duradouros, atendimento próximo e compromisso com aquilo que entrega.</p>
+          <p>Da execução de esquadrias para obras horizontais aos móveis artesanais e aos materiais para casa, nosso propósito é o mesmo. Mais do que reunir empresas, construímos um grupo baseado em pessoas, relacionamentos e na vontade de fazer sempre melhor. Hoje, a Alvieira representa a união de diferentes negócios em um só grupo, mantendo a essência de construir, transformar e deixar nossa marca.</p>
+        </div>
+        <div class="mv-cards reveal">
+          <div class="mv-card">
+            <h3>Missão</h3>
+            <p>Oferecer produtos e soluções de qualidade para obras, ambientes e lares, unindo excelência, atendimento próximo e confiança em cada relacionamento.</p>
+          </div>
+          <div class="mv-card">
+            <h3>Visão</h3>
+            <p>Ser reconhecida como um grupo sólido e inovador, referência em transformar lares — desde a obra até a decoração — crescendo de forma sustentável e construindo relações duradouras com clientes, parceiros e colaboradores.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="valores-wrap reveal">
+        <span class="eyebrow">Nossos valores</span>
+        <h2 style="font-size:1.5rem;">O que guia cada entrega da Alvieira</h2>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></div>
+            <h3>Qualidade</h3>
+            <p>Fazer bem feito e buscar sempre a melhoria.</p>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Compromisso</h3>
+            <p>Cumprir o que foi combinado e assumir responsabilidades.</p>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/></svg></div>
+            <h3>Confiança</h3>
+            <p>Construir relações transparentes e duradouras.</p>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+            <h3>Respeito</h3>
+            <p>Valorizar pessoas, clientes, parceiros e colaboradores.</p>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Inovação</h3>
+            <p>Buscar novas ideias, produtos e formas de fazer melhor.</p>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c0-3 2.7-5 6-5s6 2 6 5M10 20c0-3 2.7-5 6-5s6 2 6 5"/></svg></div>
+            <h3>União</h3>
+            <p>Crescer juntos, valorizando o trabalho em equipe.</p>
+          </div>
+        </div>
+        <p class="valores-closing">“Agir com seriedade e consciência em cada decisão.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO NEGOCIOS -->
+  <section class="negocios-intro section-pad">
+    <div class="container">
+      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <span class="eyebrow">Nossos negócios</span>
+        <h2>Duas marcas, um mesmo compromisso com a qualidade</h2>
+      </div>
+      <p class="reveal">Cada empresa do grupo Alvieira tem sua própria identidade e especialidade, mas compartilha os mesmos valores: atendimento próximo, compromisso com o que entrega e busca constante por fazer melhor.</p>
+    </div>
+  </section>
+
+  <!-- BOREAL -->
+  <section class="brand-block" id="boreal">
+    <div class="container brand-grid">
+      <div class="reveal">
+        <div class="brand-logo-wrap">
+          <img src="assets/img/logo-boreal.png" alt="Boreal Esquadrias de Alumínio — logo">
+        </div>
+        <span class="eyebrow">Esquadrias de alumínio</span>
+        <h3>Esquadrias que estruturam grandes obras</h3>
+        <p>A Boreal é especialista em esquadrias de alumínio para obras horizontais, do projeto à instalação — de janelas a portas, com acabamento técnico e atenção a cada detalhe. Atuando a partir de Cambé, no Paraná, a marca leva precisão e durabilidade para empreendimentos que exigem qualidade em escala.</p>
+        <div class="chips">
+          <span class="chip">Janelas</span>
+          <span class="chip">Portas</span>
+          <span class="chip">Fachadas em vidro e alumínio</span>
+          <span class="chip">Esquadrias para obras horizontais</span>
+        </div>
+        <a href="https://www.instagram.com/borealesquadrias" target="_blank" rel="noopener noreferrer" class="social-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+          @borealesquadrias
+        </a>
+      </div>
+      <div class="gallery-grid reveal">
+        <a href="assets/img/boreal-fachada-vidro-01.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-fachada-vidro-01.webp" type="image/webp">
+            <img src="assets/img/boreal-fachada-vidro-01.jpg" alt="Fachada em vidro e alumínio Boreal — acabamento externo" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Fachada em vidro e alumínio</span>
+        </a>
+        <a href="assets/img/boreal-fachada-vidro-02.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-fachada-vidro-02.webp" type="image/webp">
+            <img src="assets/img/boreal-fachada-vidro-02.jpg" alt="Fachada em vidro e alumínio Boreal — entrada principal" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Entrada em vidro e alumínio</span>
+        </a>
+        <a href="assets/img/boreal-esquadria-persiana.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-esquadria-persiana.webp" type="image/webp">
+            <img src="assets/img/boreal-esquadria-persiana.jpg" alt="Esquadrias Boreal com persiana integrada" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Esquadrias com persiana integrada</span>
+        </a>
+        <a href="assets/img/boreal-fachada-chocolataria.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-fachada-chocolataria.webp" type="image/webp">
+            <img src="assets/img/boreal-fachada-chocolataria.jpg" alt="Fachada comercial em esquadrias de alumínio Boreal" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Fachada comercial</span>
+        </a>
+        <a href="assets/img/boreal-fachada-coluna.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-fachada-coluna.webp" type="image/webp">
+            <img src="assets/img/boreal-fachada-coluna.jpg" alt="Cobertura e esquadrias Boreal em ambiente comercial" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Cobertura e esquadrias</span>
+        </a>
+        <a href="assets/img/boreal-fachada-loja-ceramica.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/boreal-fachada-loja-ceramica.webp" type="image/webp">
+            <img src="assets/img/boreal-fachada-loja-ceramica.jpg" alt="Esquadrias de alumínio Boreal em ambiente comercial" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Esquadrias em ambiente comercial</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITA -->
+  <section class="brand-block" id="qualita">
+    <div class="container brand-grid">
+      <div class="gallery-grid reveal">
+        <a href="assets/img/qualita-chaise-decks.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/qualita-chaise-decks.webp" type="image/webp">
+            <img src="assets/img/qualita-chaise-decks.jpg" alt="Chaise longue artesanal em corda náutica Qualitá" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Chaise longue em corda náutica</span>
+        </a>
+        <a href="assets/img/qualita-showroom-lounge.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/qualita-showroom-lounge.webp" type="image/webp">
+            <img src="assets/img/qualita-showroom-lounge.jpg" alt="Conjunto lounge artesanal em alumínio e corda Qualitá" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Conjunto lounge em alumínio e corda</span>
+        </a>
+        <a href="assets/img/qualita-varanda-conjunto.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/qualita-varanda-conjunto.webp" type="image/webp">
+            <img src="assets/img/qualita-varanda-conjunto.jpg" alt="Conjunto para varanda em fibra sintética Qualitá" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Conjunto para varanda</span>
+        </a>
+        <a href="assets/img/qualita-poltrona-suspensa.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/qualita-poltrona-suspensa.webp" type="image/webp">
+            <img src="assets/img/qualita-poltrona-suspensa.jpg" alt="Poltrona suspensa artesanal Qualitá" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Poltrona suspensa artesanal</span>
+        </a>
+        <a href="assets/img/qualita-espreguicadeiras-piscina.jpg" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="assets/img/qualita-espreguicadeiras-piscina.webp" type="image/webp">
+            <img src="assets/img/qualita-espreguicadeiras-piscina.jpg" alt="Espreguiçadeiras Qualitá para área de piscina" loading="lazy">
+          </picture>
+          <span class="gallery-cap">Espreguiçadeiras para área de piscina</span>
+        </a>
+      </div>
+      <div class="reveal">
+        <div class="brand-logo-wrap">
+          <img src="assets/img/logo-qualita.png" alt="Qualitá Móveis Artesanais — logo">
+        </div>
+        <span class="eyebrow">Móveis artesanais</span>
+        <h3>Móveis artesanais para cada ambiente</h3>
+        <p>A Qualitá cria móveis artesanais em alumínio, madeira, fibra, corda e tela — mesas, cadeiras, ombrelones, espreguiçadeiras, balcões, bistrôs e chaises que unem design, conforto e acabamento. Cada peça é pensada para dar personalidade a ambientes internos e externos.</p>
+        <div class="chips">
+          <span class="chip">Mesas</span>
+          <span class="chip">Cadeiras</span>
+          <span class="chip">Ombrelones</span>
+          <span class="chip">Espreguiçadeiras</span>
+          <span class="chip">Balcões</span>
+          <span class="chip">Bistrôs</span>
+          <span class="chip">Chaises</span>
+        </div>
+        <a href="https://www.instagram.com/moveis.qualita" target="_blank" rel="noopener noreferrer" class="social-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+          @moveis.qualita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section-pad" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Depoimentos</span>
+        <h2>O que dizem sobre a Alvieira</h2>
+      </div>
+      <div class="depo-grid">
+        <div class="depo-card reveal">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 17c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H7zm10 0c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3z"/></svg>
+          <p class="quote-text">“Já trabalhamos com a Alvieira e sempre tivemos uma ótima experiência. Produtos de qualidade, atendimento próximo e compromisso com o cliente.”</p>
+          <span class="depo-role">Parceiro Alvieira</span>
+        </div>
+        <div class="depo-card reveal">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 17c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H7zm10 0c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3z"/></svg>
+          <p class="quote-text">“Como arquiteta, busco sempre os melhores produtos para meus projetos. A Qualitá Móveis Artesanais superou minhas expectativas em qualidade, design e atendimento. Recomendo sem hesitação.”</p>
+          <span class="depo-role">Arquiteta parceira</span>
+        </div>
+        <div class="depo-card reveal">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 17c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H7zm10 0c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3z"/></svg>
+          <p class="quote-text">“Os móveis da Qualitá trouxeram um toque de elegância e personalidade para minha sala de estar. Cada peça é única e muito bem trabalhada, refletindo o cuidado artesanal por trás de cada detalhe.”</p>
+          <span class="depo-role">Cliente Qualitá</span>
+        </div>
+        <div class="depo-card reveal">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 17c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H7zm10 0c-1.7 0-3-1.3-3-3 0-4 3-8 7-9v3c-2 1-3 3-3 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3z"/></svg>
+          <p class="quote-text">“Trabalhei com a Boreal na minha casa e me surpreendi positivamente com o resultado, entregaram rápido e o acabamento ficou excelente.”</p>
+          <span class="depo-role">Cliente Boreal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section-pad" id="contato">
+    <div class="container contato-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contato</span>
+        <h2 style="margin-bottom:30px;">Fale com o grupo Alvieira</h2>
+        <div class="contato-list">
+          <div class="contato-item">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:alduansilveiras@gmail.com">alduansilveiras@gmail.com</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.6 7-12a7 7 0 10-14 0c0 5.4 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <div>
+              <strong>Endereço</strong>
+              <span>Avenida Itamarati, 2570 — Parque Industrial Cafezal<br>Rolândia/PR — 86600-580</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <div>
+              <strong>Horário de atendimento</strong>
+              <span>Segunda a sexta-feira, das 08h às 17h40</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 3v4M8 21v-4M3 8h4M21 8h-4M3 16h4M21 16h-4M16 3v4M16 21v-4"/></svg></div>
+            <div>
+              <strong>CNPJ</strong>
+              <span>47.278.581/0001-91</span>
+            </div>
+          </div>
+        </div>
+        <div class="contato-socials">
+          <a href="https://www.instagram.com/alvieiraaluminio" target="_blank" rel="noopener noreferrer" aria-label="Instagram Alvieira">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.instagram.com/borealesquadrias" target="_blank" rel="noopener noreferrer" aria-label="Instagram Boreal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.instagram.com/moveis.qualita" target="_blank" rel="noopener noreferrer" aria-label="Instagram Qualitá">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contato-card reveal">
+        <h3>Vamos conversar sobre o seu projeto</h3>
+        <p>Envie um e-mail contando se você procura esquadrias de alumínio com a Boreal, móveis artesanais com a Qualitá, ou os dois — nossa equipe responde e direciona seu contato para a marca certa.</p>
+        <a href="mailto:alduansilveiras@gmail.com" class="btn btn-amarelo">Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <img src="assets/img/logo-alvieira.png" alt="Alvieira Comércio de Alumínio">
+        <nav class="footer-nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#boreal">Boreal</a>
+          <a href="#qualita">Qualitá</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Alvieira Comércio de Alumínio — CNPJ: 47.278.581/0001-91</span>
+        <span>Rolândia/PR</span>
+      </div>
+    </div>
+
+    <!-- Rodapé MonteSite - Atualização Automática -->
+    <div id="montesite-footer-badge"></div>
+    <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+  </footer>
+
+  <button id="back-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    const iconMenu = document.getElementById('iconMenu');
+    const iconClose = document.getElementById('iconClose');
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      iconMenu.style.display = isOpen ? 'none' : 'block';
+      iconClose.style.display = isOpen ? 'block' : 'none';
+    });
+    mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      iconMenu.style.display = 'block';
+      iconClose.style.display = 'none';
+    }));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Back to top + header state + scroll progress bar
+    const backTop = document.getElementById('back-top');
+    const headerEl = document.getElementById('header');
+    const progressBar = document.getElementById('scroll-progress');
+    function onScroll() {
+      const y = window.scrollY;
+      backTop.classList.toggle('show', y > 500);
+      headerEl.classList.toggle('scrolled', y > 20);
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (y / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
