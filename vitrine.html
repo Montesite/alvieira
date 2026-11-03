@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstração de Vitrine | Alvieira Comércio de Alumínio</title>
+  <meta name="description" content="Vitrine online do grupo Alvieira: confira os produtos disponíveis.">
+  <link rel="canonical" href="https://www.alvieira.com.br/vitrine.html">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #33363e;
+      --ink-soft: #454851;
+      --gray: #6b7280;
+      --gray-light: #9aa1ab;
+      --offwhite: #f6f6f7;
+      --white: #ffffff;
+      --amarelo: #f2c118;
+      --amarelo-dark: #d9a900;
+      --navy: #142544;
+      --navy-deep: #0b1730;
+      --navy-light: #2a4470;
+      --charcoal: #17140f;
+      --charcoal-soft: #241f17;
+      --dourado: #c9a227;
+      --dourado-light: #e0c368;
+      --header-h: 78px;
+      --container: 1180px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    :focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; border-radius: 4px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    section { position: relative; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 800; line-height: 1.2; }
+    h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--ink); }
+    h3 { font-size: 1.3rem; }
+    p { line-height: 1.7; color: var(--gray); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--amarelo-dark);
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: ''; width: 22px; height: 3px; background: var(--amarelo); border-radius: 2px;
+      transition: width .6s cubic-bezier(.16,1,.3,1) .15s;
+    }
+    .reveal:not(.in) .eyebrow::before { width: 0; }
+    .section-head { max-width: 720px; margin-bottom: 44px; }
+    .section-pad { padding: 96px 0; }
+    @media (max-width: 768px) { .section-pad { padding: 64px 0; } }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem;
+      padding: 15px 28px; border-radius: 10px; border: 2px solid transparent;
+      cursor: pointer; transition: all .25s ease; white-space: nowrap;
+      position: relative; overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,0.35), transparent);
+      transform: skewX(-20deg); transition: left .55s ease;
+    }
+    .btn:hover::before { left: 130%; }
+    .btn:active { transform: scale(0.97); }
+    .btn-amarelo { background: var(--amarelo); color: var(--ink); }
+    .btn-amarelo:hover { background: var(--amarelo-dark); color: var(--ink); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(242,193,24,0.35); }
+    .btn-outline-dark { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.55); }
+    .btn-outline-dark:hover { background: rgba(255,255,255,0.16); border-color: var(--white); color: var(--white); transform: translateY(-2px); }
+    .btn-outline-light { background: transparent; color: var(--ink); border-color: rgba(25,27,32,0.4); }
+    .btn-outline-light:hover { background: var(--ink); color: var(--white); border-color: var(--ink); transform: translateY(-2px); }
+    .btn-gold-outline { background: transparent; color: var(--dourado-light); border-color: rgba(224,195,104,0.55); }
+    .btn-gold-outline:hover { background: rgba(224,195,104,0.14); border-color: var(--dourado-light); color: var(--dourado-light); transform: translateY(-2px); }
+
+    /* Scroll progress bar */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--amarelo-dark), var(--amarelo));
+      z-index: 1100; transition: width .1s linear;
+    }
+
+    /* Header */
+    header#header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--header-h); background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid rgba(0,0,0,0.06); backdrop-filter: blur(6px);
+      transition: box-shadow .3s ease, background .3s ease;
+    }
+    header#header.scrolled { background: rgba(255,255,255,0.99); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+    .logo-link img { height: 48px; width: auto; transition: transform .25s ease; }
+    .logo-link:hover img { transform: scale(1.05); }
+    nav.main-nav { display: flex; align-items: center; gap: 34px; }
+    nav.main-nav a {
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.92rem;
+      color: var(--ink-soft); position: relative; padding: 6px 0;
+    }
+    nav.main-nav a::after {
+      content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px;
+      background: var(--amarelo); transition: width .2s ease;
+    }
+    nav.main-nav a:hover::after { width: 100%; }
+    .nav-cta { margin-left: 8px; }
+    @media (min-width: 901px) and (max-width: 1150px) { nav.main-nav { gap: 22px; } nav.main-nav .nav-cta { padding: 12px 18px; } }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-toggle svg { width: 26px; height: 26px; color: var(--ink); }
+    body { padding-top: var(--header-h); }
+
+    @media (max-width: 900px) {
+      nav.main-nav {
+        position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+        height: calc(100vh - var(--header-h));
+        background: var(--white); flex-direction: column; align-items: flex-start;
+        padding: 30px 24px; gap: 22px; transform: translateX(100%);
+        transition: transform .3s ease; overflow-y: auto;
+      }
+      nav.main-nav.open { transform: translateX(0); }
+      nav.main-nav a { font-size: 1.1rem; }
+      .nav-toggle { display: block; }
+      .nav-cta { margin-left: 0; }
+    }
+
+    /* VITRINE PAGE */
+    :root { --header-h: 80px; }
+    html, body { height: 100%; overflow: hidden; scrollbar-width: none; }
+    html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
+    body { padding-top: var(--header-h); overscroll-behavior: none; }
+    nav.main-nav a.active::after { width: 100%; }
+    #vitrine-frame { display: block; width: 100%; height: calc(100vh - var(--header-h)); border: none; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="Alvieira — Início">
+        <img src="assets/img/logo-alvieira.png" alt="Alvieira Comércio de Alumínio — logo" fetchpriority="high">
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#boreal">Boreal</a>
+        <a href="index.html#qualita">Qualitá</a>
+        <a href="index.html#depoimentos">Depoimentos</a>
+        <a href="vitrine.html" class="nav-vitrine active" aria-current="page">Vitrine</a>
+        <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-amarelo nav-cta btn-wa-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>WhatsApp</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg id="iconMenu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="iconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <iframe id="vitrine-frame" src="https://grupoalvieira.egestor.com.br/vitrine/" title="Vitrine online Alvieira" style="width:100%; height:800px; border:none;"></iframe>
+  </main>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    const iconMenu = document.getElementById('iconMenu');
+    const iconClose = document.getElementById('iconClose');
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      iconMenu.style.display = isOpen ? 'none' : 'block';
+      iconClose.style.display = isOpen ? 'block' : 'none';
+    });
+    mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      iconMenu.style.display = 'block';
+      iconClose.style.display = 'none';
+    }));
+
+
+    // Altura do iframe = window.innerHeight - 80px (header)
+    const HEADER_H = 80;
+    const frame = document.getElementById('vitrine-frame');
+    function fitFrame() {
+      frame.style.height = (window.innerHeight - HEADER_H) + 'px';
+    }
+    fitFrame();
+    window.addEventListener('resize', fitFrame);
+    window.addEventListener('orientationchange', fitFrame);
+  </script>
+</body>
+</html>

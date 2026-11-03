@@ -35,6 +35,7 @@
     "url": "https://www.alvieira.com.br/",
     "logo": "https://www.alvieira.com.br/assets/img/logo-alvieira.png",
     "email": "mailto:alduansilveiras@gmail.com",
+    "telephone": "+55-43-9863-4693",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Avenida Itamarati, 2570 - Parque Industrial Cafezal",
@@ -146,7 +147,7 @@
     }
     header#header.scrolled { background: rgba(255,255,255,0.99); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
-    .logo-link img { height: 30px; width: auto; transition: transform .25s ease; }
+    .logo-link img { height: 48px; width: auto; transition: transform .25s ease; }
     .logo-link:hover img { transform: scale(1.05); }
     nav.main-nav { display: flex; align-items: center; gap: 34px; }
     nav.main-nav a {
@@ -159,6 +160,7 @@
     }
     nav.main-nav a:hover::after { width: 100%; }
     .nav-cta { margin-left: 8px; }
+    @media (min-width: 901px) and (max-width: 1150px) { nav.main-nav { gap: 22px; } nav.main-nav .nav-cta { padding: 12px 18px; } }
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
     .nav-toggle svg { width: 26px; height: 26px; color: var(--ink); }
     body { padding-top: var(--header-h); }
@@ -213,9 +215,17 @@
       color: rgba(255,255,255,0.82); max-width: 640px; margin-bottom: 40px; line-height: 1.6;
     }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
-    .hero-brands { display: flex; gap: 28px; margin-top: 64px; flex-wrap: wrap; }
+    .hero-brands { display: flex; align-items: center; gap: 40px; margin-top: 64px; flex-wrap: wrap; }
     .hero-brand-chip { display: flex; align-items: center; gap: 12px; }
-    .hero-brand-chip img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .hero-brand-chip img { height: 64px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .hero-brand-chip--wide img { height: 46px; }
+    @media (max-width: 600px) {
+      .logo-link img { height: 38px; }
+      .hero-brands { gap: 24px; }
+      .hero-brand-chip img { height: 50px; }
+      .hero-brand-chip--wide img { height: 34px; }
+      .brand-logo-wrap img { height: 96px; }
+    }
 
     /* SOBRE */
     #sobre {
@@ -283,11 +293,20 @@
     }
     .negocios-intro .section-head { margin: 0 auto 0; }
     .negocios-intro p { max-width: 700px; margin: 0 auto; font-size: 1.05rem; }
+    .negocios-logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 56px; margin-top: 44px; }
+    .negocios-logo img { height: 100px; width: auto; transition: transform .3s ease; }
+    .negocios-logo--wide img { height: 64px; }
+    .negocios-logo:hover img { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      .negocios-logos { gap: 28px; }
+      .negocios-logo img { height: 72px; }
+      .negocios-logo--wide img { height: 44px; }
+    }
 
     /* BRAND BLOCKS shared */
     .brand-block { padding: 100px 0; }
     .brand-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: center; }
-    .brand-logo-wrap img { height: 64px; width: auto; margin-bottom: 26px; transition: transform .3s ease; }
+    .brand-logo-wrap img { height: 120px; width: auto; margin-bottom: 26px; transition: transform .3s ease; }
     .brand-logo-wrap:hover img { transform: scale(1.05); }
     .brand-block h3 { font-size: clamp(1.5rem, 2.6vw, 1.9rem); margin-bottom: 16px; }
     .brand-block .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
@@ -457,9 +476,69 @@
       .reveal, .valor-card, .gallery-grid a, .depo-card { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
     }
 
+    /* VITRINE CTA */
+    .vitrine-cta {
+      background: radial-gradient(ellipse at bottom left, #24283a 0%, var(--charcoal) 60%, #0e0d0a 100%);
+      color: var(--white); overflow: hidden;
+    }
+    .vitrine-cta h2 { color: var(--white); margin-bottom: 18px; }
+    .vitrine-cta p { color: rgba(255,255,255,0.72); max-width: 520px; }
+    .vitrine-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 60px; align-items: center; }
+    .vitrine-feats { display: flex; flex-direction: column; gap: 14px; margin: 26px 0 32px; }
+    .vitrine-feats li { display: flex; align-items: center; gap: 14px; color: rgba(255,255,255,0.88); font-weight: 500; }
+    .vf-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(242,193,24,0.12); border: 1px solid rgba(242,193,24,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .vf-icon svg { width: 18px; height: 18px; color: var(--amarelo); }
+    .vitrine-cta .btn svg { width: 18px; height: 18px; }
+    .vitrine-mock {
+      display: block; position: relative; background: #fff; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.45); transform: rotate(-1.5deg); transition: transform .35s ease;
+    }
+    .vitrine-mock:hover { transform: rotate(0deg) translateY(-4px); }
+    .vm-bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: var(--offwhite); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .vm-bar span { width: 10px; height: 10px; border-radius: 50%; background: #d4d6da; }
+    .vm-bar span:first-child { background: var(--amarelo); }
+    .vm-bar em { font-style: normal; font-size: 0.75rem; color: var(--gray); margin-left: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .vm-body { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 18px; }
+    .vm-card { border: 1px solid rgba(0,0,0,0.07); border-radius: 10px; padding: 8px 8px 12px; }
+    .vm-thumb { aspect-ratio: 4/3; border-radius: 6px; background-size: cover; background-position: center; margin-bottom: 10px; }
+    .vm-card i { display: block; height: 7px; border-radius: 4px; background: #e6e7ea; margin: 0 2px 6px; }
+    .vm-card i.short { width: 45%; background: rgba(242,193,24,0.6); margin-bottom: 0; }
+    .vm-cta {
+      position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+      display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px;
+      background: var(--ink); color: var(--white); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.88rem;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.3); white-space: nowrap;
+    }
+    .vm-cta svg { width: 16px; height: 16px; color: var(--amarelo); }
+    @media (max-width: 900px) {
+      .vitrine-grid { grid-template-columns: 1fr; gap: 44px; }
+      .vitrine-mock { transform: none; max-width: 520px; }
+    }
+    @media (max-width: 480px) { .vm-body { gap: 10px; padding: 12px; } }
+
+    /* WHATSAPP */
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-whatsapp:hover { background: #1EBE5A; color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37,211,102,0.35); }
+    .btn-wa-icon svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn-wa-icon { gap: 8px; }
+    .contato-card-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    #wa-float {
+      position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%;
+      background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3); z-index: 950; transition: transform .25s ease, background .25s ease;
+    }
+    #wa-float svg { width: 30px; height: 30px; }
+    #wa-float:hover { background: #1EBE5A; transform: translateY(-3px) scale(1.05); }
+    #wa-float::after {
+      content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25D366;
+      animation: waPulse 2.4s ease-out infinite;
+    }
+    @keyframes waPulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.55); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { #wa-float::after { animation: none; display: none; } }
+
     /* BACK TO TOP */
     #back-top {
-      position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px;
+      position: fixed; right: 28px; bottom: 92px; width: 46px; height: 46px;
       border-radius: 50%; background: var(--ink); border: 1px solid rgba(255,255,255,0.15);
       display: flex; align-items: center; justify-content: center; cursor: pointer;
       opacity: 0; visibility: hidden; transition: all .25s ease; z-index: 900;
@@ -516,7 +595,8 @@
         <a href="#boreal">Boreal</a>
         <a href="#qualita">Qualitá</a>
         <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato" class="btn btn-amarelo nav-cta">Contato</a>
+        <a href="vitrine.html" class="nav-vitrine">Vitrine</a>
+        <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-amarelo nav-cta btn-wa-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>WhatsApp</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg id="iconMenu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -534,8 +614,13 @@
       <div class="hero-ctas">
         <a href="#boreal" class="btn btn-amarelo">Conheça a Boreal</a>
         <a href="#qualita" class="btn btn-outline-dark">Conheça a Qualitá</a>
+        <a href="vitrine.html" class="btn btn-outline-dark btn-wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>Ver vitrine</a>
+        <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-wa-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>Fale no WhatsApp</a>
       </div>
       <div class="hero-brands">
+        <div class="hero-brand-chip hero-brand-chip--wide">
+          <img src="assets/img/logo-alvieira.png" alt="Alvieira Comércio de Alumínio">
+        </div>
         <div class="hero-brand-chip">
           <img src="assets/img/logo-boreal.png" alt="Boreal Esquadrias de Alumínio">
         </div>
@@ -617,9 +702,20 @@
     <div class="container">
       <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
         <span class="eyebrow">Nossos negócios</span>
-        <h2>Duas marcas, um mesmo compromisso com a qualidade</h2>
+        <h2>Três marcas, um mesmo compromisso com a qualidade</h2>
       </div>
       <p class="reveal">Cada empresa do grupo Alvieira tem sua própria identidade e especialidade, mas compartilha os mesmos valores: atendimento próximo, compromisso com o que entrega e busca constante por fazer melhor.</p>
+      <div class="negocios-logos reveal">
+        <a href="#sobre" class="negocios-logo negocios-logo--wide" aria-label="Alvieira">
+          <img src="assets/img/logo-alvieira.png" alt="Alvieira Comércio de Alumínio — logo" loading="lazy">
+        </a>
+        <a href="#boreal" class="negocios-logo" aria-label="Boreal">
+          <img src="assets/img/logo-boreal.png" alt="Boreal Esquadrias de Alumínio — logo" loading="lazy">
+        </a>
+        <a href="#qualita" class="negocios-logo" aria-label="Qualitá">
+          <img src="assets/img/logo-qualita.png" alt="Qualitá Móveis Artesanais — logo" loading="lazy">
+        </a>
+      </div>
     </div>
   </section>
 
@@ -755,6 +851,33 @@
     </div>
   </section>
 
+  <!-- VITRINE -->
+  <section class="vitrine-cta section-pad" id="vitrine">
+    <div class="container vitrine-grid">
+      <div class="reveal">
+        <span class="eyebrow">Vitrine online</span>
+        <h2>Veja os produtos do grupo Alvieira</h2>
+        <p>Na nossa vitrine online você confere os produtos disponíveis, com fotos, descrições e valores, tudo em um só lugar. Encontrou o que procurava? É só chamar a nossa equipe para fechar o pedido.</p>
+        <ul class="vitrine-feats">
+          <li><span class="vf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>Catálogo organizado por categoria</li>
+          <li><span class="vf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L2 12V2h10l8.6 8.6a2 2 0 010 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span>Produtos com fotos e informações completas</li>
+          <li><span class="vf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>Atendimento direto para tirar dúvidas</li>
+        </ul>
+        <a href="vitrine.html" class="btn btn-amarelo btn-wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>Acessar a vitrine<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <a href="vitrine.html" class="vitrine-mock reveal" aria-label="Abrir a vitrine online">
+        <div class="vm-bar"><span></span><span></span><span></span><em>grupoalvieira.egestor.com.br/vitrine</em></div>
+        <div class="vm-body">
+          <div class="vm-card"><div class="vm-thumb" style="background-image:url('assets/img/boreal-fachada-vidro-01.jpg')"></div><i></i><i class="short"></i></div>
+          <div class="vm-card"><div class="vm-thumb" style="background-image:url('assets/img/qualita-chaise-decks.jpg')"></div><i></i><i class="short"></i></div>
+          <div class="vm-card"><div class="vm-thumb" style="background-image:url('assets/img/boreal-esquadria-persiana.jpg')"></div><i></i><i class="short"></i></div>
+          <div class="vm-card"><div class="vm-thumb" style="background-image:url('assets/img/qualita-showroom-lounge.jpg')"></div><i></i><i class="short"></i></div>
+        </div>
+        <span class="vm-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>Abrir vitrine</span>
+      </a>
+    </div>
+  </section>
+
   <!-- DEPOIMENTOS -->
   <section class="section-pad" id="depoimentos">
     <div class="container">
@@ -795,6 +918,13 @@
         <h2 style="margin-bottom:30px;">Fale com o grupo Alvieira</h2>
         <div class="contato-list">
           <div class="contato-item">
+            <div class="icon-box"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">(43) 9863-4693</a>
+            </div>
+          </div>
+          <div class="contato-item">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
             <div>
               <strong>E-mail</strong>
@@ -824,6 +954,9 @@
           </div>
         </div>
         <div class="contato-socials">
+          <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Alvieira">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+          </a>
           <a href="https://www.instagram.com/alvieiraaluminio" target="_blank" rel="noopener noreferrer" aria-label="Instagram Alvieira">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
           </a>
@@ -838,8 +971,11 @@
 
       <div class="contato-card reveal">
         <h3>Vamos conversar sobre o seu projeto</h3>
-        <p>Envie um e-mail contando se você procura esquadrias de alumínio com a Boreal, móveis artesanais com a Qualitá, ou os dois — nossa equipe responde e direciona seu contato para a marca certa.</p>
-        <a href="mailto:alduansilveiras@gmail.com" class="btn btn-amarelo">Enviar e-mail</a>
+        <p>Chame no WhatsApp ou envie um e-mail contando se você procura esquadrias de alumínio com a Boreal, móveis artesanais com a Qualitá, ou os dois — nossa equipe responde e direciona seu contato para a marca certa.</p>
+        <div class="contato-card-ctas">
+          <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-wa-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>Chamar no WhatsApp</a>
+          <a href="mailto:alduansilveiras@gmail.com" class="btn btn-outline-dark">Enviar e-mail</a>
+        </div>
       </div>
     </div>
   </section>
@@ -854,6 +990,7 @@
           <a href="#boreal">Boreal</a>
           <a href="#qualita">Qualitá</a>
           <a href="#depoimentos">Depoimentos</a>
+          <a href="vitrine.html">Vitrine</a>
           <a href="#contato">Contato</a>
         </nav>
       </div>
@@ -867,6 +1004,10 @@
     <div id="montesite-footer-badge"></div>
     <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
   </footer>
+
+  <a href="https://wa.me/554398634693?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20grupo%20Alvieira%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." id="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 01-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 01-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 012.76 6.68c0 5.2-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0012.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 005.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.37 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+  </a>
 
   <button id="back-top" aria-label="Voltar ao topo">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
